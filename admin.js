@@ -56,6 +56,6 @@ const run = async () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
-    await server.listen(5000, () => console.log("Server started"));
+    await server.listen(process.env.PORT || 5500, () => console.log("Server started"));
 }
 run()
