@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/mongoose": "^1.1.0",
+    "admin-bro": "^4.0.1",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "mongoose": "^5.13.3",
+    "tslib": "^2.3.0"
+  },
+  "name": "adminexams",
+  "description": "System Admin for Exams",
+  "version": "1.0.0",
+  "main": "admin.js",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
+  "scripts": {
+    "start": "node admin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadsonJR/AdminExams.git"
+  },
+  "author": "Antonio Nadson Cruz Gaido Junior",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NadsonJR/AdminExams/issues"
+  },
+  "homepage": "https://github.com/NadsonJR/AdminExams#readme"
+}
