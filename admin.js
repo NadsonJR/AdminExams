@@ -1,7 +1,7 @@
 // ============================================
 // Database
 const mongoose = require("mongoose");
-
+const connectionString = process.env.DB_CONNECTION
 const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -52,7 +52,7 @@ server
 // =============================================
 // Run App
 const run = async () => {
-    await mongoose.connect(process.env.DB_CONNECTION, {
+    await mongoose.connect(connectionString, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
