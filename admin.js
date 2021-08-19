@@ -52,7 +52,7 @@ server
 // =============================================
 // Run App
 const run = async () => {
-    await mongoose.connect("mongodb+srv://admin:admin@adminexams.5vvj4.mongodb.net/examsclients?retryWrites=true&w=majority", {
+    await mongoose.connect(process.env.DB_CONNECTION, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
