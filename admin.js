@@ -1,7 +1,6 @@
 // ============================================
 // Database
 const mongoose = require("mongoose");
-const connectionString = process.env.DB_CONNECTION
 const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -11,6 +10,8 @@ const ProjectSchema = new mongoose.Schema({
     loja: String,
     created_at: { type: Date, default: Date.now },
 });
+
+require('dotenv').config();
 const Project = mongoose.model("client", ProjectSchema);
 // ============================================
 // Admin Bro
@@ -52,7 +53,7 @@ server
 // =============================================
 // Run App
 const run = async () => {
-    await mongoose.connect(connectionString, {
+    await mongoose.connect(process.env.DB_CONNECTION, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
