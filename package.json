@@ -3,9 +3,11 @@
     "@admin-bro/express": "^3.1.0",
     "@admin-bro/mongoose": "^1.1.0",
     "admin-bro": "^4.0.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
     "mongoose": "^5.13.3",
+    "moongose": "^1.0.0",
     "tslib": "^2.3.0"
   },
   "name": "adminexams",
@@ -13,8 +15,8 @@
   "version": "1.0.0",
   "main": "admin.js",
   "engines": {
-    "node": "14.x",
-    "npm": "7.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "start": "node admin.js"

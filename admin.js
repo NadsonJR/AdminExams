@@ -1,7 +1,7 @@
 // ============================================
 // Database
 const mongoose = require("mongoose");
-
+require('dotenv').config()
 const ProjectSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -52,10 +52,8 @@ server
 // =============================================
 // Run App
 const run = async () => {
-    await mongoose.connect("mongodb+srv://admin:admin@adminexams.5vvj4.mongodb.net/examsclients?retryWrites=true&w=majority", {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
-    await server.listen(process.env.PORT || 5500, () => console.log("Server started"));
+    await mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true });
+    await server.listen(process.env.PORT || 5500, () => console.log("Server started" )
+    );
 }
 run()
